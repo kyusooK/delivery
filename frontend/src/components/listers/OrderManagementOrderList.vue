@@ -129,7 +129,7 @@
                 'orderStatus': '',
                 'orderStatusType': '',
                 'orderTime': '',
-                'totalAmount': '',
+                'totalAmount': {},
             }
         },
         methods: {

@@ -110,7 +110,7 @@
             
             me.newValue = {
                 'name': '',
-                'address': '',
+                'address': {},
                 'phone': '',
             }
         },

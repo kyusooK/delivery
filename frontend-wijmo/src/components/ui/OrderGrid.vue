@@ -41,7 +41,11 @@
             <wj-flex-grid-column binding="orderStatus" header="주문 상태" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="orderStatusType" header="주문 상태 유형" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="orderTime" header="주문 시간" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="totalAmount" header="총 금액" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="totalAmount" header="총 금액" width="2*" :isReadOnly="true" align="center">
+                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
+                    <Money v-model="cell.item.totalAmount" :editMode="editMode"></Money>
+                </wj-flex-grid-cell-template>
+            </wj-flex-grid-column>
         </wj-flex-grid>
         <v-col>
             <v-dialog

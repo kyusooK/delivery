@@ -38,7 +38,11 @@
         >
             <wj-flex-grid-filter :filterColumns="['RowHeader','orderId','amount','paymentMethod','paymentStatus','paymentStatusType','paymentTime','earnedPoints',]" />
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
-            <wj-flex-grid-column binding="amount" header="결제 금액" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="amount" header="결제 금액" width="2*" :isReadOnly="true" align="center">
+                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
+                    <Money v-model="cell.item.amount" :editMode="editMode"></Money>
+                </wj-flex-grid-cell-template>
+            </wj-flex-grid-column>
             <wj-flex-grid-column binding="paymentMethod" header="결제 방법" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="paymentStatus" header="결제 상태" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="paymentStatusType" header="결제 상태 유형" width="2*" :isReadOnly="true" align="center" />

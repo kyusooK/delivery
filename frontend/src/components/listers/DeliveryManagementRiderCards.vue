@@ -111,7 +111,7 @@
             me.newValue = {
                 'name': '',
                 'phone': '',
-                'currentLocation': '',
+                'currentLocation': {},
             }
         },
         methods:{

@@ -88,7 +88,7 @@
 
             this.newValue = {
                 'name': '',
-                'address': '',
+                'address': {},
                 'phone': '',
             }
         },

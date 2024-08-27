@@ -127,7 +127,7 @@
             
             this.newValue = {
                 'orderId': {},
-                'amount': '',
+                'amount': {},
                 'paymentMethod': '',
                 'paymentStatus': '',
                 'paymentStatusType': '',

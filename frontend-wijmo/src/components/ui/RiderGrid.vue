@@ -40,7 +40,11 @@
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
             <wj-flex-grid-column binding="name" header="라이더 이름" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="phone" header="전화번호" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="currentLocation" header="현재 위치" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="currentLocation" header="현재 위치" width="2*" :isReadOnly="true" align="center">
+                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
+                    <Address v-model="cell.item.currentLocation" :editMode="editMode"></Address>
+                </wj-flex-grid-cell-template>
+            </wj-flex-grid-column>
         </wj-flex-grid>
         <v-col>
             <v-dialog
